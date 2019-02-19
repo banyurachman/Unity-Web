@@ -15,6 +15,12 @@ $fontColor:(
   orange: #e98457
 );
 
+@mixin transition(){
+  -webkit-transition: all .2s;
+  -ms-transition: all .2s;
+  transition: all .2s;
+}
+
 
 body{
   font-family: $mainFont;
@@ -86,11 +92,13 @@ body{
         border-bottom-style: solid;
         border-bottom-width: 2.5px;
         border-bottom-color: transparent;
+        @include transition();
 
         &:hover{
           background: transparent;
           border-bottom-color: $green;
           opacity: 1;
+          @include transition();
         }
 
         &.active{
@@ -114,6 +122,15 @@ main{
       font-weight: 600;
       font-size: 15px;
       letter-spacing: 2.5px;
+    }
+
+    h1{
+      font-weight: 700;
+      color: map-get($fontColor, primary);
+      text-transform: uppercase;
+      display: inline-block;
+      margin: 0 20px 0 0;
+      word-spacing: 10px;
     }
   }
 }
@@ -179,17 +196,82 @@ main{
         .content{
           margin-top: -100px;
 
-          h1{
-            font-weight: 700;
-            color: map-get($fontColor, primary);
-            text-transform: uppercase;
-            display: inline-block;
-            margin: 0 20px 0 0;
-            word-spacing: 10px;
+          h1:last-child{
+            color: map-get($fontColor, orange);
+          }
+        }
+      }
+    }
+  }
+}
 
-            &:last-child{
-              color: map-get($fontColor, orange);
-            }
+#meetTheTeamSection{
+  .content{
+    position: relative;
+
+    #shape-4{
+      position: absolute;
+      transform: translate(-100px, 100px);
+      z-index: -1;
+    }
+
+    #shape-5{
+      position: absolute;
+      right: 0;
+      z-index: -1;
+    }
+
+    #shape-6{
+      position: absolute;
+      left: -50px;
+      top: 200px;
+      z-index: -1;
+    }
+
+    .row{
+      margin-top: 50px;
+
+      &.profile{
+        margin-top: 0px;
+        @include transition();
+
+        h4{
+          margin: 10px 0px 10px 0px;
+        }
+
+        .name{
+          font-size: 15px;
+          color: map-get($fontColor, secondary);
+        }
+
+        .title{
+          font-size: 13px;
+          color: map-get($fontColor, tertiaty);
+        }
+
+        .socmed{
+          margin-top: 20px;
+
+          a{
+            text-decoration: none;
+            color: map-get($fontColor, primary);
+            margin-right: 10px;
+          }
+        }
+
+        &:hover{
+          background-color: $green;
+          .name, .title, .socmed a{
+            color: white;
+          }
+          @include transition();
+        }
+
+        .col{
+          padding: 20px;
+
+          img{
+            width: 100%;
           }
         }
       }

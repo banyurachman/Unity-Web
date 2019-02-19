@@ -53,11 +53,17 @@ body {
         height: 50px;
         border-bottom-style: solid;
         border-bottom-width: 2.5px;
-        border-bottom-color: transparent; }
+        border-bottom-color: transparent;
+        -webkit-transition: all .2s;
+        -ms-transition: all .2s;
+        transition: all .2s; }
         #mainMenu ul li a:hover {
           background: transparent;
           border-bottom-color: #1bf1ad;
-          opacity: 1; }
+          opacity: 1;
+          -webkit-transition: all .2s;
+          -ms-transition: all .2s;
+          transition: all .2s; }
         #mainMenu ul li a.active {
           opacity: 1;
           font-weight: 500;
@@ -72,6 +78,13 @@ main section {
     font-weight: 600;
     font-size: 15px;
     letter-spacing: 2.5px; }
+  main section h1 {
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.9);
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    word-spacing: 10px; }
 
 #aboutUsSection .text.container {
   max-width: 500px; }
@@ -112,12 +125,53 @@ main section {
     transform: translateX(-300px); }
   #whatWeDoSection .row .col.l7 .content {
     margin-top: -100px; }
-    #whatWeDoSection .row .col.l7 .content h1 {
-      font-weight: 700;
-      color: rgba(0, 0, 0, 0.9);
-      text-transform: uppercase;
-      display: inline-block;
-      margin: 0 20px 0 0;
-      word-spacing: 10px; }
-      #whatWeDoSection .row .col.l7 .content h1:last-child {
-        color: #e98457; }
+    #whatWeDoSection .row .col.l7 .content h1:last-child {
+      color: #e98457; }
+
+#meetTheTeamSection .content {
+  position: relative; }
+  #meetTheTeamSection .content #shape-4 {
+    position: absolute;
+    transform: translate(-100px, 100px);
+    z-index: -1; }
+  #meetTheTeamSection .content #shape-5 {
+    position: absolute;
+    right: 0;
+    z-index: -1; }
+  #meetTheTeamSection .content #shape-6 {
+    position: absolute;
+    left: -50px;
+    top: 200px;
+    z-index: -1; }
+  #meetTheTeamSection .content .row {
+    margin-top: 50px; }
+    #meetTheTeamSection .content .row.profile {
+      margin-top: 0px;
+      -webkit-transition: all .2s;
+      -ms-transition: all .2s;
+      transition: all .2s; }
+      #meetTheTeamSection .content .row.profile h4 {
+        margin: 10px 0px 10px 0px; }
+      #meetTheTeamSection .content .row.profile .name {
+        font-size: 15px;
+        color: #303030; }
+      #meetTheTeamSection .content .row.profile .title {
+        font-size: 13px;
+        color: #666666; }
+      #meetTheTeamSection .content .row.profile .socmed {
+        margin-top: 20px; }
+        #meetTheTeamSection .content .row.profile .socmed a {
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.9);
+          margin-right: 10px; }
+      #meetTheTeamSection .content .row.profile:hover {
+        background-color: #1bf1ad;
+        -webkit-transition: all .2s;
+        -ms-transition: all .2s;
+        transition: all .2s; }
+        #meetTheTeamSection .content .row.profile:hover .name, #meetTheTeamSection .content .row.profile:hover .title, #meetTheTeamSection .content .row.profile:hover .socmed a {
+          color: white; }
+      #meetTheTeamSection .content .row.profile .col {
+        padding: 20px; }
+        #meetTheTeamSection .content .row.profile .col img {
+          width: 100%; }
