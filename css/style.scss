@@ -3,6 +3,7 @@
 $headerHeight: 500px;
 $mainFont: 'Poppins';
 $green: #1bf1ad;
+$greenOverlay: rgba(27,241,173,0.8);
 $sectionPadding:(
   top: 80px,
   bottom: 0px
@@ -275,6 +276,146 @@ main{
           }
         }
       }
+    }
+  }
+}
+
+#ourWorkSection{
+  .content{
+    position: relative;
+
+    #shape-3{
+      position: absolute;
+      top: -50px;
+      right: 200px;
+      z-index: -1;
+    }
+
+    #shape-7{
+      position: absolute;
+      bottom: 50px;
+      left: 0px;
+      z-index: -1;
+    }
+  }
+
+  .slider{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-top: 75px;
+
+    .sliderItem{
+      width: 375px;
+      height: 350px;
+      display: inline-block;
+      margin: 10px;
+      position: relative;
+
+      .sliderItemContent{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 30px;
+        width: 100%;
+        overflow-x: hidden;
+
+        h3{
+          color: white;
+          font-size: 20px;
+          letter-spacing: 5px;
+          font-weight: 600;
+          text-transform: uppercase;
+          visibility: hidden;
+        }
+
+        p{
+          color: white;
+          font-size: 10px;
+          letter-spacing: 3px;
+          font-weight: 400;
+          text-transform: uppercase;
+          visibility: hidden;
+        }
+
+      }
+
+      &.sliderItem-1{
+        background: url('../images/work-1.png');
+        @include transition();
+
+        &:hover{
+          background: linear-gradient(to right, $greenOverlay,
+                $greenOverlay), url('../images/work-1.png');
+          .sliderItemContent{
+            h3, p{
+              visibility: visible;
+            }
+          }
+          @include transition();
+        }
+      }
+      &.sliderItem-2{
+        background: url('../images/work-2.png');
+        @include transition();
+
+        &:hover{
+          background: linear-gradient(to right, $greenOverlay,
+                $greenOverlay), url('../images/work-2.png');
+          .sliderItemContent{
+            h3, p{
+              visibility: visible;
+            }
+          }
+          @include transition();
+        }
+      }
+      &.sliderItem-3{
+        background: url('../images/work-3.png');
+        @include transition();
+
+        &:hover{
+          background: linear-gradient(to right, $greenOverlay,
+                $greenOverlay), url('../images/work-3.png');
+          .sliderItemContent{
+            h3, p{
+              visibility: visible;
+            }
+          }
+          @include transition();
+        }
+      }
+      &.sliderItem-4{
+        background: url('../images/work-4.png');
+        @include transition();
+
+        &:hover{
+          background: linear-gradient(to right, $greenOverlay,
+                $greenOverlay), url('../images/work-4.png');
+          .sliderItemContent{
+            h3, p{
+              visibility: visible;
+            }
+          }
+          @include transition();
+        }
+      }
+      &.sliderItem-5{
+        background: url('../images/work-5.png');
+        @include transition();
+
+        &:hover{
+          background: linear-gradient(to right, $greenOverlay,
+                $greenOverlay), url('../images/work-5.png');
+          .sliderItemContent{
+            h3, p{
+              visibility: visible;
+            }
+          }
+          @include transition();
+        }
+      }
+
     }
   }
 }
