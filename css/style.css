@@ -316,7 +316,7 @@ main section {
               padding-right: 20px; } }
         @media (max-width: 768px) {
           #meetTheTeamSection .content .row.profile .col {
-            padding: 0px 20px 0px 20px; } }
+            padding: 10px; } }
         #meetTheTeamSection .content .row.profile .col img {
           width: 100%; }
 
