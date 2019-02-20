@@ -28,8 +28,9 @@
   <body>
     <nav id="mainMenuFixed">
       <div class="nav-wrapper">
-        <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i><img src="images/unitylogo-black.svg" alt="unity logo"></a>
         <ul class="hide-on-med-and-down">
+          <li><a href="#!" class="nonLink"><img src="images/unitylogo-black.svg" width="90px" style="margin-bottom:-1px" alt="unity logo"></a></li>
           <li><a href="#homeSection" class="homeSectionLink">Home</a></li>
           <li><a href="#aboutUsSection" class="aboutUsSectionLink">About Us</a></li>
           <li><a href="#whatWeDoSection" class="whatWeDoSectionLink">What We Do</a></li>
@@ -42,7 +43,7 @@
 
     <header class="parallax-container" id="homeSection">
       <div class="container">
-        <a href="#"><img src="images/unitylogo.png" alt="unity logo"></a>
+        <a href="#"><img src="images/unitylogo-white.svg" width="150px" alt="unity logo"></a>
         <div class="valign-wrapper">
           <h2 class="center-align" id="headerMainTitle">Great experiences build great brands.</h2>
         </div>
@@ -60,15 +61,16 @@
           </div>
         </nav>
         <ul class="sidenav" id="mobile">
-          <li><a href="#homeSection">Home</a></li>
-          <li><a href="#aboutUsSection">About Us</a></li>
-          <li><a href="#whatWeDoSection">What We Do</a></li>
-          <li><a href="#meetTheTeamSection">Meet The Team</a></li>
-          <li><a href="#ourWorkSection">Our Work</a></li>
-          <li><a href="#getInTouchSection">Get In Touch</a></li>
+          <li><a href="#homeSection" class="sidenav-close">Home</a></li>
+          <li><a href="#aboutUsSection" class="sidenav-close">About Us</a></li>
+          <li><a href="#whatWeDoSection" class="sidenav-close">What We Do</a></li>
+          <li><a href="#meetTheTeamSection" class="sidenav-close">Meet The Team</a></li>
+          <li><a href="#ourWorkSection" class="sidenav-close">Our Work</a></li>
+          <li><a href="#getInTouchSection" class="sidenav-close">Get In Touch</a></li>
         </ul>
       </div>
-     <div class="parallax"><img src="images/header.png"></div>
+     <div class="parallax desktop"><img src="images/header.png"></div>
+     <div class="parallax mobile"><img src="images/headerMobile.png"></div>
    </header>
 
    <main>
@@ -206,6 +208,14 @@
               <p>by Fabrizio Morra</p>
             </div>
           </a>
+        </div>
+        <div class="scrollButton show-on-large">
+          <div class="btn" id="scrollButtonLeft">
+            <img src="images/button-left.png" alt="">
+          </div>
+          <div class="btn" id="scrollButtonRight">
+            <img src="images/button-right.png" alt="">
+          </div>
         </div>
      </section>
    </main>

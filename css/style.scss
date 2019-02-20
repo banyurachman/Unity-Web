@@ -22,6 +22,28 @@ $fontColor:(
   transition: all .2s;
 }
 
+$breakpoints: (
+    'phone':  480px,
+    'tablet': 768px,
+    'landscapeTablet': 1024px
+  )!default;
+
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
 
 body{
   font-family: $mainFont;
@@ -29,6 +51,32 @@ body{
 
 .parallax{
   background: black;
+
+  &.mobile{
+    visibility: visible;
+    @include respond-to('phone') {
+      visibility: hidden;
+    }
+  }
+
+  &.desktop{
+    visibility: hidden;
+    @include respond-to('phone') {
+      visibility: visible;
+    }
+  }
+}
+
+.sidenav-trigger{
+  i{
+    display: inline-block !important;
+  }
+
+  img{
+    width: 120px;
+    margin-bottom: 3.5px;
+    margin-left: 20px;
+  }
 }
 
 #mainMenuFixed{
@@ -63,6 +111,10 @@ body{
         border-bottom-width: 2.5px;
         border-bottom-color: transparent;
 
+        &.nonLink{
+          cursor: default;
+        }
+
         @include transition();
 
         &:hover{
@@ -70,6 +122,11 @@ body{
           border-bottom-color: $green;
           opacity: 1;
           @include transition();
+
+          &.nonLink{
+            background: transparent;
+            border-bottom-color: transparent;
+          }
         }
 
         &.active{
@@ -332,6 +389,8 @@ main{
 }
 
 #ourWorkSection{
+  position: relative;
+
   .content{
     position: relative;
 
@@ -469,6 +528,28 @@ main{
           }
           @include transition();
         }
+      }
+
+    }
+  }
+
+  .scrollButton{
+    position: relative;
+    transform: translateY(-100%);
+    z-index: 10;
+
+    .btn{
+      position: absolute;
+      background: transparent;
+      box-shadow: 0 0 0 0;
+      top: -250px;
+
+      &#scrollButtonRight{
+        right: 0;
+      }
+
+      img{
+        width: 75px;
       }
 
     }

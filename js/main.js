@@ -21,7 +21,14 @@ $( document ).ready(function() {
         }else{
           $('#mainMenuFixed').hide();
         }
-        // Do something
+    });
+
+    $('#scrollButtonLeft').click(function(){
+      $('.slider').animate({scrollLeft: -9999});
+    });
+
+    $('#scrollButtonRight').click(function(){
+      $('.slider').animate({scrollLeft: 9999});
     });
 
     function checkActiveSection(){
@@ -69,7 +76,6 @@ $( document ).ready(function() {
     ScrollReveal().reveal('#mainMenu', {delay:1000});
     ScrollReveal().reveal('.sectionTitle');
     ScrollReveal().reveal('section h1', {delay:800});
-    ScrollReveal().reveal('section p', {delay:800});
     ScrollReveal().reveal('section img', {delay:1200});
     ScrollReveal().reveal('#aboutUsSection .sectionTitle', {delay:1000});
     ScrollReveal().reveal('#aboutUsSection p', {delay:1200});
