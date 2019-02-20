@@ -12,8 +12,12 @@
   <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4"></script>
+	<script>
+		ScrollReveal({ duration: 2000 })
+	</script>
   <script src="js/main.js"></script>
   <!-- Icon -->
   <link rel="icon" href="images/unityicon.png">
@@ -22,7 +26,21 @@
   </head>
 
   <body>
-    <header class="parallax-container" id="heroHeader">
+    <nav id="mainMenuFixed">
+      <div class="nav-wrapper">
+        <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="hide-on-med-and-down">
+          <li><a href="#homeSection" class="homeSectionLink">Home</a></li>
+          <li><a href="#aboutUsSection" class="aboutUsSectionLink">About Us</a></li>
+          <li><a href="#whatWeDoSection" class="whatWeDoSectionLink">What We Do</a></li>
+          <li><a href="#meetTheTeamSection" class="meetTheTeamSectionLink">Meet The Team</a></li>
+          <li><a href="#ourWorkSection" class="ourWorkSectionLink">Our Work</a></li>
+          <li><a href="#getInTouchSection" class="getInTouchSectionLink">Get In Touch</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="parallax-container" id="homeSection">
       <div class="container">
         <a href="#"><img src="images/unitylogo.png" alt="unity logo"></a>
         <div class="valign-wrapper">
@@ -32,20 +50,22 @@
           <div class="nav-wrapper">
             <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="hide-on-med-and-down">
-              <li><a href="#heroHeader">Home</a></li>
-              <li><a href="#aboutUsSection">About Us</a></li>
-              <li><a href="#whatWeDoSection">What We Do</a></li>
-              <li><a href="#meetTheTeamSection">Meet The Team</a></li>
-              <li><a href="#ourWorkSection">Our Work</a></li>
-              <li><a href="#getInTouchSection">Get In Touch</a></li>
+              <li><a href="#homeSection" class="homeSectionLink">Home</a></li>
+              <li><a href="#aboutUsSection" class="aboutUsSectionLink">About Us</a></li>
+              <li><a href="#whatWeDoSection" class="whatWeDoSectionLink">What We Do</a></li>
+              <li><a href="#meetTheTeamSection" class="meetTheTeamSectionLink">Meet The Team</a></li>
+              <li><a href="#ourWorkSection" class="ourWorkSectionLink">Our Work</a></li>
+              <li><a href="#getInTouchSection" class="getInTouchSectionLink">Get In Touch</a></li>
             </ul>
           </div>
         </nav>
         <ul class="sidenav" id="mobile">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">Javascript</a></li>
-          <li><a href="mobile.html">Mobile</a></li>
+          <li><a href="#homeSection">Home</a></li>
+          <li><a href="#aboutUsSection">About Us</a></li>
+          <li><a href="#whatWeDoSection">What We Do</a></li>
+          <li><a href="#meetTheTeamSection">Meet The Team</a></li>
+          <li><a href="#ourWorkSection">Our Work</a></li>
+          <li><a href="#getInTouchSection">Get In Touch</a></li>
         </ul>
       </div>
      <div class="parallax"><img src="images/header.png"></div>
@@ -196,7 +216,7 @@
          <div class="col s12 m8 l9">
            <h3>Have a project? Call us <span>1.800.987.6321</span></h3>
              <ul>
-               <li><a href="#heroHeader">Home</a></li>
+               <li><a href="#homeSection">Home</a></li>
                <li><a href="#aboutUsSection">About Us</a></li>
                <li><a href="#whatWeDoSection">What We Do</a></li>
                <li><a href="#meetTheTeamSection">Meet The Team</a></li>

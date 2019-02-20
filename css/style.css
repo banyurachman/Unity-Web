@@ -5,22 +5,63 @@ body {
 .parallax {
   background: black; }
 
-#heroHeader {
+#mainMenuFixed {
+  background: white;
+  position: fixed;
+  text-transform: uppercase;
+  box-shadow: 3px 5px 25px -4px rgba(0, 0, 0, 0.05);
+  z-index: 999; }
+  #mainMenuFixed a {
+    color: rgba(0, 0, 0, 0.9); }
+  #mainMenuFixed ul {
+    text-align: center; }
+    #mainMenuFixed ul li {
+      display: inline;
+      float: none; }
+      #mainMenuFixed ul li a {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 2.5px;
+        opacity: 0.8;
+        padding: 0px 10px 0px 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        height: 50px;
+        border-bottom-style: solid;
+        border-bottom-width: 2.5px;
+        border-bottom-color: transparent;
+        -webkit-transition: all .2s;
+        -ms-transition: all .2s;
+        transition: all .2s; }
+        #mainMenuFixed ul li a:hover {
+          background: transparent;
+          border-bottom-color: #1bf1ad;
+          opacity: 1;
+          -webkit-transition: all .2s;
+          -ms-transition: all .2s;
+          transition: all .2s; }
+        #mainMenuFixed ul li a.active {
+          opacity: 1;
+          font-weight: 600;
+          border-bottom-color: #1bf1ad; }
+
+#homeSection {
   height: 500px;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)); }
-  #heroHeader .container {
+  #homeSection .container {
     position: relative;
     height: 100%; }
-    #heroHeader .container img {
+    #homeSection .container img {
       margin-top: 25px; }
-    #heroHeader .container .valign-wrapper {
+    #homeSection .container .valign-wrapper {
       position: absolute;
       top: 0;
       width: 100%;
       height: 500px;
       padding-left: 200px;
       padding-right: 200px; }
-  #heroHeader #headerMainTitle {
+  #homeSection #headerMainTitle {
     width: 100%;
     text-transform: uppercase;
     font-size: 30px;
@@ -43,7 +84,7 @@ body {
       float: none; }
       #mainMenu ul li a {
         display: inline-block;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 12px;
         letter-spacing: 2.5px;
         opacity: 0.8;
