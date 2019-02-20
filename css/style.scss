@@ -276,7 +276,7 @@ main{
 #aboutUsSection{
 
   @include respond-to('phone'){
-      padding-top: 0px;
+      padding-top: 15px;
   }
 
   .text.container{

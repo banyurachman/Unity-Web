@@ -173,7 +173,7 @@ main section {
 
 @media (max-width: 480px) {
   #aboutUsSection {
-    padding-top: 0px; } }
+    padding-top: 15px; } }
 
 #aboutUsSection .text.container {
   max-width: 500px; }
