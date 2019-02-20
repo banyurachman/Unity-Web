@@ -6,12 +6,12 @@ body {
   background: black; }
   .parallax.mobile {
     visibility: hidden; }
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
       .parallax.mobile {
         visibility: visible; } }
   .parallax.desktop {
     visibility: visible; }
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
       .parallax.desktop {
         visibility: hidden; } }
 
@@ -170,6 +170,10 @@ main section {
     @media (max-width: 480px) {
       main section h1 {
         font-size: 43px; } }
+
+@media (max-width: 480px) {
+  #aboutUsSection {
+    padding-top: 0px; } }
 
 #aboutUsSection .text.container {
   max-width: 500px; }

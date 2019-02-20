@@ -59,14 +59,14 @@ body{
 
   &.mobile{
     visibility: hidden;
-    @include respond-to('phone') {
+    @include respond-to('tablet') {
       visibility: visible;
     }
   }
 
   &.desktop{
     visibility: visible;
-    @include respond-to('phone') {
+    @include respond-to('tablet') {
       visibility: hidden;
     }
   }
@@ -274,6 +274,11 @@ main{
 }
 
 #aboutUsSection{
+
+  @include respond-to('phone'){
+      padding-top: 0px;
+  }
+
   .text.container{
     max-width:500px;
 
