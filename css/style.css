@@ -5,15 +5,15 @@ body {
 .parallax {
   background: black; }
   .parallax.mobile {
-    visibility: visible; }
-    @media (min-width: 480px) {
-      .parallax.mobile {
-        visibility: hidden; } }
-  .parallax.desktop {
     visibility: hidden; }
-    @media (min-width: 480px) {
-      .parallax.desktop {
+    @media (max-width: 480px) {
+      .parallax.mobile {
         visibility: visible; } }
+  .parallax.desktop {
+    visibility: visible; }
+    @media (max-width: 480px) {
+      .parallax.desktop {
+        visibility: hidden; } }
 
 .sidenav-trigger i {
   display: inline-block !important; }
@@ -84,6 +84,10 @@ body {
       height: 500px;
       padding-left: 200px;
       padding-right: 200px; }
+      @media (max-width: 1024px) {
+        #homeSection .container .valign-wrapper {
+          padding-left: 100px;
+          padding-right: 100px; } }
   #homeSection #headerMainTitle {
     width: 100%;
     text-transform: uppercase;
@@ -175,6 +179,9 @@ main section {
     width: 50%;
     font-weight: 600;
     color: #303030; }
+    @media (max-width: 1024px) {
+      #whatWeDoSection .row .col.l5 h3 {
+        font-size: 40px; } }
   #whatWeDoSection .row .col.l7 #shape-1 {
     position: relative;
     transform: translate(50%, -100px);
@@ -192,6 +199,10 @@ main section {
     #whatWeDoSection .row .col.l7 .content h1:last-child {
       color: #e98457; }
 
+@media (max-width: 1024px) {
+  #meetTheTeamSection {
+    padding: 0; } }
+
 #meetTheTeamSection .content {
   position: relative; }
   #meetTheTeamSection .content #shape-4 {
@@ -202,11 +213,19 @@ main section {
     position: absolute;
     right: 0;
     z-index: -1; }
+    @media (max-width: 1024px) {
+      #meetTheTeamSection .content #shape-5 {
+        right: -50px; } }
   #meetTheTeamSection .content #shape-6 {
     position: absolute;
     left: -50px;
     top: 200px;
     z-index: -1; }
+    @media (max-width: 1024px) {
+      #meetTheTeamSection .content #shape-6 {
+        top: 250px;
+        left: -30px;
+        width: 100px; } }
   #meetTheTeamSection .content .row {
     margin-top: 50px; }
     #meetTheTeamSection .content .row.profile {
@@ -237,6 +256,11 @@ main section {
           color: white; }
       #meetTheTeamSection .content .row.profile .col {
         padding: 20px; }
+        @media (max-width: 1024px) {
+          #meetTheTeamSection .content .row.profile .col {
+            padding: 5px; }
+            #meetTheTeamSection .content .row.profile .col:last-child {
+              padding-left: 20px; } }
         #meetTheTeamSection .content .row.profile .col img {
           width: 100%; }
 
@@ -254,6 +278,9 @@ main section {
       bottom: 50px;
       left: 0px;
       z-index: -1; }
+      @media (max-width: 1024px) {
+        #ourWorkSection .content #shape-7 {
+          left: -70px; } }
   #ourWorkSection .slider {
     overflow-x: scroll;
     overflow-y: hidden;
@@ -366,6 +393,9 @@ main section {
   margin-top: 75px;
   border-top: solid 1px rgba(0, 0, 0, 0.1);
   padding-top: 75px; }
+  @media (max-width: 1024px) {
+    #getInTouchSection .container {
+      width: 85%; } }
   #getInTouchSection h3 {
     font-size: 20px;
     font-weight: 700;

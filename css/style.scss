@@ -33,7 +33,7 @@ $breakpoints: (
   // If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) {
     // Prints a media query based on the value
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
   }
@@ -53,16 +53,16 @@ body{
   background: black;
 
   &.mobile{
-    visibility: visible;
+    visibility: hidden;
     @include respond-to('phone') {
-      visibility: hidden;
+      visibility: visible;
     }
   }
 
   &.desktop{
-    visibility: hidden;
+    visibility: visible;
     @include respond-to('phone') {
-      visibility: visible;
+      visibility: hidden;
     }
   }
 }
@@ -159,6 +159,11 @@ body{
       height: $headerHeight;
       padding-left: 200px;
       padding-right: 200px;
+
+      @include respond-to('landscapeTablet'){
+        padding-left: 100px;
+        padding-right: 100px;
+      }
     }
   }
 
@@ -280,6 +285,10 @@ main{
           width: 50%;
           font-weight: 600;
           color: map-get($fontColor, secondary);
+
+          @include respond-to('landscapeTablet'){
+            font-size: 40px;
+          }
         }
       }
 
@@ -315,6 +324,11 @@ main{
 }
 
 #meetTheTeamSection{
+
+  @include respond-to('landscapeTablet'){
+    padding: 0;
+  }
+
   .content{
     position: relative;
 
@@ -328,6 +342,10 @@ main{
       position: absolute;
       right: 0;
       z-index: -1;
+
+      @include respond-to('landscapeTablet'){
+        right: -50px;
+      }
     }
 
     #shape-6{
@@ -335,6 +353,12 @@ main{
       left: -50px;
       top: 200px;
       z-index: -1;
+
+      @include respond-to('landscapeTablet'){
+        top: 250px;
+        left: -30px;
+        width: 100px;
+      }
     }
 
     .row{
@@ -379,6 +403,14 @@ main{
         .col{
           padding: 20px;
 
+          @include respond-to('landscapeTablet'){
+            padding: 5px;
+
+            &:last-child{
+              padding-left: 20px;
+            }
+          }
+
           img{
             width: 100%;
           }
@@ -406,6 +438,10 @@ main{
       bottom: 50px;
       left: 0px;
       z-index: -1;
+
+      @include respond-to('landscapeTablet'){
+        left: -70px;
+      }
     }
   }
 
@@ -560,6 +596,12 @@ main{
   margin-top: 75px;
   border-top: solid 1px rgba(0,0,0,0.1);
   padding-top: 75px;
+
+  .container{
+    @include respond-to('landscapeTablet'){
+      width: 85%;
+    }
+  }
 
   h3{
     font-size: 20px;
