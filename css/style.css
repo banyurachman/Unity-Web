@@ -88,6 +88,14 @@ body {
         #homeSection .container .valign-wrapper {
           padding-left: 100px;
           padding-right: 100px; } }
+      @media (max-width: 768px) {
+        #homeSection .container .valign-wrapper {
+          padding-left: 75px;
+          padding-right: 75px; } }
+      @media (max-width: 480px) {
+        #homeSection .container .valign-wrapper {
+          padding-left: 50px;
+          padding-right: 50px; } }
   #homeSection #headerMainTitle {
     width: 100%;
     text-transform: uppercase;
@@ -146,6 +154,9 @@ main section {
     font-weight: 600;
     font-size: 15px;
     letter-spacing: 2.5px; }
+    @media (max-width: 480px) {
+      main section .sectionTitle {
+        margin-top: 100px; } }
   main section h1 {
     font-weight: 700;
     color: rgba(0, 0, 0, 0.9);
@@ -153,6 +164,12 @@ main section {
     display: inline-block;
     margin: 0 20px 0 0;
     word-spacing: 10px; }
+    @media (max-width: 768px) {
+      main section h1 {
+        font-size: 47.5px; } }
+    @media (max-width: 480px) {
+      main section h1 {
+        font-size: 43px; } }
 
 #aboutUsSection .text.container {
   max-width: 500px; }
@@ -182,6 +199,12 @@ main section {
     @media (max-width: 1024px) {
       #whatWeDoSection .row .col.l5 h3 {
         font-size: 40px; } }
+    @media (max-width: 768px) {
+      #whatWeDoSection .row .col.l5 h3 {
+        font-size: 35px; } }
+  @media (max-width: 480px) {
+    #whatWeDoSection .row .col.l7 {
+      padding: 0 5% 0 5%; } }
   #whatWeDoSection .row .col.l7 #shape-1 {
     position: relative;
     transform: translate(50%, -100px);
@@ -203,12 +226,22 @@ main section {
   #meetTheTeamSection {
     padding: 0; } }
 
+@media (max-width: 480px) {
+  #meetTheTeamSection .sectionTitle {
+    margin-top: 25px; } }
+
 #meetTheTeamSection .content {
   position: relative; }
   #meetTheTeamSection .content #shape-4 {
     position: absolute;
     transform: translate(-100px, 100px);
     z-index: -1; }
+    @media (max-width: 768px) {
+      #meetTheTeamSection .content #shape-4 {
+        transform: translate(500px, 200px); } }
+    @media (max-width: 480px) {
+      #meetTheTeamSection .content #shape-4 {
+        transform: translate(300px, 200px); } }
   #meetTheTeamSection .content #shape-5 {
     position: absolute;
     right: 0;
@@ -216,6 +249,9 @@ main section {
     @media (max-width: 1024px) {
       #meetTheTeamSection .content #shape-5 {
         right: -50px; } }
+    @media (max-width: 480px) {
+      #meetTheTeamSection .content #shape-5 {
+        right: 0; } }
   #meetTheTeamSection .content #shape-6 {
     position: absolute;
     left: -50px;
@@ -226,6 +262,13 @@ main section {
         top: 250px;
         left: -30px;
         width: 100px; } }
+    @media (max-width: 768px) {
+      #meetTheTeamSection .content #shape-6 {
+        width: 150px;
+        top: 200px; } }
+    @media (max-width: 480px) {
+      #meetTheTeamSection .content #shape-6 {
+        top: 250px; } }
   #meetTheTeamSection .content .row {
     margin-top: 50px; }
     #meetTheTeamSection .content .row.profile {
@@ -238,9 +281,15 @@ main section {
       #meetTheTeamSection .content .row.profile .name {
         font-size: 15px;
         color: #303030; }
+        @media (max-width: 768px) {
+          #meetTheTeamSection .content .row.profile .name {
+            font-size: 20px; } }
       #meetTheTeamSection .content .row.profile .title {
         font-size: 13px;
         color: #666666; }
+        @media (max-width: 768px) {
+          #meetTheTeamSection .content .row.profile .title {
+            font-size: 15px; } }
       #meetTheTeamSection .content .row.profile .socmed {
         margin-top: 20px; }
         #meetTheTeamSection .content .row.profile .socmed a {
@@ -261,17 +310,23 @@ main section {
             padding: 5px; }
             #meetTheTeamSection .content .row.profile .col:last-child {
               padding-right: 20px; } }
+        @media (max-width: 768px) {
+          #meetTheTeamSection .content .row.profile .col {
+            padding: 0px 20px 0px 20px; } }
         #meetTheTeamSection .content .row.profile .col img {
           width: 100%; }
 
 #ourWorkSection {
   position: relative; }
+  @media (max-width: 480px) {
+    #ourWorkSection {
+      padding-top: 0; } }
   #ourWorkSection .content {
     position: relative; }
     #ourWorkSection .content #shape-3 {
       position: absolute;
       top: -50px;
-      right: 200px;
+      right: 50px;
       z-index: -1; }
     #ourWorkSection .content #shape-7 {
       position: absolute;
@@ -294,6 +349,14 @@ main section {
       display: inline-block;
       margin: 10px;
       position: relative; }
+      @media (max-width: 768px) {
+        #ourWorkSection .slider .sliderItem {
+          width: 320px;
+          height: 300px; } }
+      @media (max-width: 480px) {
+        #ourWorkSection .slider .sliderItem {
+          width: 300px;
+          height: 275px; } }
       #ourWorkSection .slider .sliderItem .sliderItemContent {
         position: absolute;
         bottom: 0;
@@ -379,6 +442,9 @@ main section {
     position: relative;
     transform: translateY(-100%);
     z-index: 10; }
+    @media (max-width: 768px) {
+      #ourWorkSection .scrollButton {
+        display: none; } }
     #ourWorkSection .scrollButton .btn {
       position: absolute;
       background: transparent;
@@ -393,9 +459,15 @@ main section {
   margin-top: 75px;
   border-top: solid 1px rgba(0, 0, 0, 0.1);
   padding-top: 75px; }
+  @media (max-width: 768px) {
+    #getInTouchSection {
+      margin-top: 0px; } }
   @media (max-width: 1024px) {
     #getInTouchSection .container {
       width: 85%; } }
+  @media (max-width: 480px) {
+    #getInTouchSection .col:last-child {
+      margin-top: 50px; } }
   #getInTouchSection h3 {
     font-size: 20px;
     font-weight: 700;
@@ -432,6 +504,9 @@ main section {
       font-size: 12px;
       text-transform: uppercase;
       font-weight: 600; }
+      @media (max-width: 480px) {
+        #getInTouchSection .contact a {
+          margin-right: 20px; } }
     #getInTouchSection .contact .material-icons {
       display: inline-flex;
       vertical-align: middle; }

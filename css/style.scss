@@ -45,6 +45,11 @@ $breakpoints: (
   }
 }
 
+@mixin headerPadding($padding){
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
 body{
   font-family: $mainFont;
 }
@@ -161,8 +166,15 @@ body{
       padding-right: 200px;
 
       @include respond-to('landscapeTablet'){
-        padding-left: 100px;
-        padding-right: 100px;
+        @include headerPadding(100px);
+      }
+
+      @include respond-to('tablet'){
+        @include headerPadding(75px);
+      }
+
+      @include respond-to('phone'){
+        @include headerPadding(50px);
       }
     }
   }
@@ -236,6 +248,10 @@ main{
       font-weight: 600;
       font-size: 15px;
       letter-spacing: 2.5px;
+
+      @include respond-to('phone'){
+        margin-top: 100px;
+      }
     }
 
     h1{
@@ -245,6 +261,14 @@ main{
       display: inline-block;
       margin: 0 20px 0 0;
       word-spacing: 10px;
+
+      @include respond-to('tablet'){
+        font-size: 47.5px;
+      }
+
+      @include respond-to('phone'){
+        font-size: 43px;
+      }
     }
   }
 }
@@ -289,10 +313,18 @@ main{
           @include respond-to('landscapeTablet'){
             font-size: 40px;
           }
+
+          @include respond-to('tablet'){
+            font-size: 35px;
+          }
         }
       }
 
       &.l7{
+        @include respond-to('phone'){
+            padding: 0 5% 0 5%;
+        }
+
         #shape-1{
           position: relative;
           transform: translate(50%, -100px);
@@ -329,6 +361,12 @@ main{
     padding: 0;
   }
 
+  .sectionTitle{
+    @include respond-to('phone'){
+        margin-top: 25px;
+    }
+  }
+
   .content{
     position: relative;
 
@@ -336,6 +374,14 @@ main{
       position: absolute;
       transform: translate(-100px, 100px);
       z-index: -1;
+
+      @include respond-to('tablet'){
+        transform: translate(500px, 200px);
+      }
+
+      @include respond-to('phone'){
+        transform: translate(300px, 200px);
+      }
     }
 
     #shape-5{
@@ -345,6 +391,10 @@ main{
 
       @include respond-to('landscapeTablet'){
         right: -50px;
+      }
+
+      @include respond-to('phone'){
+        right: 0;
       }
     }
 
@@ -358,6 +408,15 @@ main{
         top: 250px;
         left: -30px;
         width: 100px;
+      }
+
+      @include respond-to('tablet'){
+        width: 150px;
+        top: 200px;
+      }
+
+      @include respond-to('phone'){
+        top: 250px;
       }
     }
 
@@ -375,11 +434,19 @@ main{
         .name{
           font-size: 15px;
           color: map-get($fontColor, secondary);
+
+          @include respond-to('tablet'){
+            font-size: 20px;
+          }
         }
 
         .title{
           font-size: 13px;
           color: map-get($fontColor, tertiaty);
+
+          @include respond-to('tablet'){
+            font-size: 15px;
+          }
         }
 
         .socmed{
@@ -411,6 +478,10 @@ main{
             }
           }
 
+          @include respond-to('tablet'){
+            padding: 0px 20px 0px 20px;
+          }
+
           img{
             width: 100%;
           }
@@ -423,13 +494,17 @@ main{
 #ourWorkSection{
   position: relative;
 
+  @include respond-to('phone'){
+      padding-top: 0;
+  }
+
   .content{
     position: relative;
 
     #shape-3{
       position: absolute;
       top: -50px;
-      right: 200px;
+      right: 50px;
       z-index: -1;
     }
 
@@ -461,6 +536,16 @@ main{
       display: inline-block;
       margin: 10px;
       position: relative;
+
+      @include respond-to('tablet'){
+          width: 320px;
+          height: 300px;
+      }
+
+      @include respond-to('phone'){
+        width: 300px;
+        height: 275px;
+      }
 
       .sliderItemContent{
         position: absolute;
@@ -574,6 +659,10 @@ main{
     transform: translateY(-100%);
     z-index: 10;
 
+    @include respond-to('tablet'){
+        display: none;
+    }
+
     .btn{
       position: absolute;
       background: transparent;
@@ -597,9 +686,19 @@ main{
   border-top: solid 1px rgba(0,0,0,0.1);
   padding-top: 75px;
 
+  @include respond-to('tablet'){
+    margin-top: 0px;
+  }
+
   .container{
     @include respond-to('landscapeTablet'){
       width: 85%;
+    }
+  }
+
+  .col:last-child{
+    @include respond-to('phone'){
+        margin-top: 50px;
     }
   }
 
@@ -657,6 +756,10 @@ main{
       font-size: 12px;
       text-transform: uppercase;
       font-weight: 600;
+
+      @include respond-to('phone'){
+        margin-right: 20px;
+      }
     }
 
     .material-icons{
