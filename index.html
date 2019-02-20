@@ -22,15 +22,24 @@
   <!-- Icon -->
   <link rel="icon" href="images/unityicon.png">
   <!-- Title -->
-  <title>UNITY</title>
+  <title>UNITY by BR</title>
   </head>
 
   <body>
+
+    <!-- Menu that will be fixed after the hero header is invisible in the viewport -->
     <nav id="mainMenuFixed">
       <div class="nav-wrapper">
-        <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i><img src="images/unitylogo-black.svg" alt="unity logo"></a>
+        <!-- The Trigger button for side navigation in small width device -->
+        <a href="#" data-target="mobile" class="sidenav-trigger">
+          <i class="material-icons">menu</i><img src="images/unitylogo-black.svg" alt="unity logo">
+        </a>
         <ul class="hide-on-med-and-down">
-          <li><a href="#!" class="nonLink"><img src="images/unitylogo-black.svg" width="90px" style="margin-bottom:-1px" alt="unity logo"></a></li>
+          <li>
+            <a href="#!" class="nonLink">
+              <img src="images/unitylogo-black.svg" width="90px" style="margin-bottom:-1px" alt="unity logo">
+            </a>
+          </li>
           <li><a href="#homeSection" class="homeSectionLink">Home</a></li>
           <li><a href="#aboutUsSection" class="aboutUsSectionLink">About Us</a></li>
           <li><a href="#whatWeDoSection" class="whatWeDoSectionLink">What We Do</a></li>
@@ -41,12 +50,14 @@
       </div>
     </nav>
 
+    <!-- Hero header a.k.a home section -->
     <header class="parallax-container" id="homeSection">
       <div class="container">
         <a href="#"><img src="images/unitylogo-white.svg" width="150px" alt="unity logo"></a>
         <div class="valign-wrapper">
           <h2 class="center-align" id="headerMainTitle">Great experiences build great brands.</h2>
         </div>
+        <!-- The main menu in the home section -->
         <nav id="mainMenu">
           <div class="nav-wrapper">
             <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -60,6 +71,7 @@
             </ul>
           </div>
         </nav>
+        <!-- The side navigation or sidebar for small width device -->
         <ul class="sidenav" id="mobile">
           <li><a href="#homeSection" class="sidenav-close">Home</a></li>
           <li><a href="#aboutUsSection" class="sidenav-close">About Us</a></li>
@@ -69,11 +81,13 @@
           <li><a href="#getInTouchSection" class="sidenav-close">Get In Touch</a></li>
         </ul>
       </div>
+      <!-- Images for the home section background (parallax effect) -->
      <div class="parallax desktop"><img src="images/header.png"></div>
      <div class="parallax mobile"><img src="images/headerMobile.png"></div>
    </header>
 
    <main>
+     <!-- About us section -->
      <section id="aboutUsSection">
        <div class="container center">
          <h3 class="sectionTitle">Digital Creatives</h3>
@@ -87,12 +101,15 @@
        </div>
      </section>
 
+     <!-- What We Do section -->
      <section id="whatWeDoSection">
        <div class="row">
+         <!-- First column, the image (the man with the whiteboard) and the quote -->
          <div class="col s12 m6 l5">
            <img src="images/whiteboard.png" alt="">
            <h3>Ideas are easy to come by. Execution is really, really hard.</h3>
          </div>
+         <!-- Second column, the ideology -->
          <div class="col s12 m6 l7">
            <img src="images/shape-1.png" alt="" id="shape-1">
            <div class="content">
@@ -104,20 +121,24 @@
              <h1>Experiment ></h1>
              <h1>Win</h1>
            </div>
+           <!-- Ornament/decoration -->
            <img src="images/shape-2.png" alt="" id="shape-2">
            <img src="images/shape-3.png" alt="" id="shape-3">
          </div>
        </div>
      </section>
 
+     <!-- Meet the team section -->
      <section id="meetTheTeamSection">
        <div class="content container">
+         <!-- Ornament/decoration -->
          <img src="images/shape-4.png" alt="" id="shape-4">
          <img src="images/shape-5.png" alt="" id="shape-5">
          <img src="images/shape-6.png" alt="" id="shape-6">
          <h3 class="sectionTitle">Meet The Team</h3>
          <h1>We're a small team, but have a ton of experience</h1>
          <div class="row">
+           <!-- Profile 1 -->
            <div class="col s12 m8 l4">
              <div class="profile row">
                <div class="col s5">
@@ -134,6 +155,7 @@
                </div>
              </div>
            </div>
+           <!-- Profile 2 -->
            <div class="col s12 m8 l4">
              <div class="profile row">
                <div class="col s5">
@@ -150,6 +172,7 @@
                </div>
              </div>
            </div>
+           <!-- Profile 3 -->
            <div class="col s12 m8 l4">
              <div class="profile row">
                <div class="col s5">
@@ -170,6 +193,7 @@
        </div>
      </section>
 
+     <!-- Our work section -->
      <section id="ourWorkSection">
        <div class="center content container">
          <img src="images/shape-3.png" alt="" id="shape-3">
@@ -177,6 +201,7 @@
          <h3 class="sectionTitle">Our Featured Work</h3>
          <h1>We create engaging experiences through creativity & craft</h1>
        </div>
+       <!-- The slider -->
        <div class="slider">
           <a class="sliderItem sliderItem-1" href="https://medium.com" target="_blank">
             <div class="sliderItemContent">
@@ -209,6 +234,7 @@
             </div>
           </a>
         </div>
+        <!-- The button in for the slider -->
         <div class="scrollButton show-on-large">
           <div class="btn" id="scrollButtonLeft">
             <img src="images/button-left.png" alt="">
@@ -220,9 +246,11 @@
      </section>
    </main>
 
+   <!-- Get in touch section/footer -->
    <footer id="getInTouchSection">
      <div class="container">
        <div class="row">
+         <!-- Column for footer main content and the links -->
          <div class="col s12 m8 l9">
            <h3>Have a project? Call us <span>1.800.987.6321</span></h3>
              <ul>
@@ -234,6 +262,7 @@
                <li><a href="#getInTouchSection">Get In Touch</a></li>
              </ul>
          </div>
+         <!-- Column for social media buttons and contact -->
          <div class="col s12 m4 l3">
            <div class="socmed">
              <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook-f"></i></a>

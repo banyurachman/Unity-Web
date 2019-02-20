@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+
+    // Some initialize
     $('.parallax').parallax();
     $('.sidenav').sidenav();
     $('.carousel').carousel({
@@ -7,22 +9,27 @@ $( document ).ready(function() {
       numVisible: 4
     });
 
+    // Get the header height for fixed menu purpose
     var headerHeight = $('#homeSection').height();
 
-    if($(window).scrollTop() > headerHeight-1){
-      $('#mainMenuFixed').show();
-    }else{
-      $('#mainMenuFixed').hide();
+    // Show/hide the menu based on the header visibility in the viewport
+    function menuVisibility(){
+      if($(window).scrollTop() > headerHeight-1){
+        $('#mainMenuFixed').show();
+      }else{
+        $('#mainMenuFixed').hide();
+      }
     }
 
+    //Check the opening position
+    menuVisibility();
+
+    //Check the header visibility when scrolling
     $(window).scroll(function (event) {
-        if($(window).scrollTop() > headerHeight-1){
-          $('#mainMenuFixed').show();
-        }else{
-          $('#mainMenuFixed').hide();
-        }
+        menuVisibility();
     });
 
+    // Buttons for slider
     $('#scrollButtonLeft').click(function(){
       $('.slider').animate({scrollLeft: -9999});
     });
@@ -31,6 +38,7 @@ $( document ).ready(function() {
       $('.slider').animate({scrollLeft: 9999});
     });
 
+    // Check the active section and give an active class to the menu list
     function checkActiveSection(){
       var sections = ["homeSection","aboutUsSection","whatWeDoSection","meetTheTeamSection","ourWorkSection","getInTouchSection"];
 
@@ -46,6 +54,7 @@ $( document ).ready(function() {
           }
       });
 
+      // If the viewport reach the bottom, then the selected menu item must be Get In Touch section/Footer
       if($(window).scrollTop() + $(window).height() == $(document).height()) {
          $(".getInTouchSectionLink").addClass("active");
          $(".ourWorkSectionLink").removeClass("active");
@@ -53,12 +62,15 @@ $( document ).ready(function() {
 
     }
 
+    // Check the opening position
     checkActiveSection()
 
+    // Check when scrolling
     $(document).on('scroll', function() {
         checkActiveSection();
     });
 
+    // Make the anchor link will scroll the page
     scrollIt = function(){
       $("a[href^='#']").click(function(e) {
         e.preventDefault();
@@ -71,6 +83,7 @@ $( document ).ready(function() {
 
     scrollIt();
 
+    // Use the reveal animation
     ScrollReveal().reveal('#homeSection a img', {delay:400});
     ScrollReveal().reveal('#headerMainTitle', {delay:800});
     ScrollReveal().reveal('#mainMenu', {delay:1000});

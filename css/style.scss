@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800');
 
+// Most used variable
 $headerHeight: 500px;
 $mainFont: 'Poppins';
 $green: #1bf1ad;
 $greenOverlay: rgba(27,241,173,0.8);
+
+// Section (main segment) padding variable
 $sectionPadding:(
   top: 80px,
   bottom: 0px
 );
 
+// Font color sets for the web
 $fontColor:(
   primary: rgba(0,0,0,0.9),
   secondary: rgb(48, 48, 48),
@@ -16,19 +20,21 @@ $fontColor:(
   orange: #e98457
 );
 
+// Breakpoints for responsiveness
+$breakpoints: (
+  'phone':  480px,
+  'tablet': 768px,
+  'landscapeTablet': 1024px
+)!default;
+
+// Mixin for transition effect
 @mixin transition(){
   -webkit-transition: all .2s;
   -ms-transition: all .2s;
   transition: all .2s;
 }
 
-$breakpoints: (
-    'phone':  480px,
-    'tablet': 768px,
-    'landscapeTablet': 1024px
-  )!default;
-
-
+//Mixin for responsiveness
 @mixin respond-to($breakpoint) {
   // If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) {
@@ -45,6 +51,7 @@ $breakpoints: (
   }
 }
 
+// Mixin for set the home section/header padding
 @mixin headerPadding($padding){
   padding-left: $padding;
   padding-right: $padding;
@@ -54,6 +61,7 @@ body{
   font-family: $mainFont;
 }
 
+// Main image background setting
 .parallax{
   background: black;
 
@@ -72,6 +80,7 @@ body{
   }
 }
 
+// Sidebar setting for Unity logo
 .sidenav-trigger{
   i{
     display: inline-block !important;
@@ -84,6 +93,7 @@ body{
   }
 }
 
+// The fixed menu
 #mainMenuFixed{
   background: white;
   position: fixed;
@@ -144,6 +154,7 @@ body{
   }
 }
 
+// Home section
 #homeSection{
   height: $headerHeight;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0),
@@ -191,6 +202,7 @@ body{
   }
 }
 
+// Main menu (non-fixed)
 #mainMenu{
   background: transparent;
   box-shadow: 0 0 0 0;
@@ -238,6 +250,7 @@ body{
 }
 
 main{
+  // Global section setting
   section{
     padding-top: map-get($sectionPadding, top);
     padding-bottom: map-get($sectionPadding, bottom);
@@ -254,6 +267,7 @@ main{
       }
     }
 
+    // Global h1 (big text) setting
     h1{
       font-weight: 700;
       color: map-get($fontColor, primary);
@@ -273,6 +287,7 @@ main{
   }
 }
 
+// About us section
 #aboutUsSection{
 
   @include respond-to('phone'){
@@ -293,6 +308,7 @@ main{
   }
 }
 
+// What we do section
 #whatWeDoSection{
   .row{
     .col{
@@ -360,6 +376,7 @@ main{
   }
 }
 
+// Meet the team section
 #meetTheTeamSection{
 
   @include respond-to('landscapeTablet'){
@@ -496,6 +513,7 @@ main{
   }
 }
 
+// Our work section
 #ourWorkSection{
   position: relative;
 
@@ -686,6 +704,7 @@ main{
   }
 }
 
+// Get in touch section/footer
 #getInTouchSection{
   margin-top: 75px;
   border-top: solid 1px rgba(0,0,0,0.1);
