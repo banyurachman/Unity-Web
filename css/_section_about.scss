@@ -1,0 +1,19 @@
+#aboutUsSection{
+
+  @include respond-to('phone'){
+      padding-top: 15px;
+  }
+
+  .text.container{
+    max-width:500px;
+
+    p{
+      color: map-get($fontColor, tertiaty);
+      font-weight: 300;
+      font-size: 20px;
+      word-spacing: 3px;
+      letter-spacing: 1px;
+      margin-top: 30px;
+    }
+  }
+}

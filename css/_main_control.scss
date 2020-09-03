@@ -1,0 +1,73 @@
+body{
+  font-family: $mainFont;
+}
+
+// Main image background setting
+.parallax{
+  background: black;
+
+  &.mobile{
+    visibility: hidden;
+    @include respond-to('tablet') {
+      visibility: visible;
+    }
+  }
+
+  &.desktop{
+    visibility: visible;
+    @include respond-to('tablet') {
+      visibility: hidden;
+    }
+  }
+}
+
+// Sidebar setting for Unity logo
+.sidenav-trigger{
+  i{
+    display: inline-block !important;
+  }
+
+  img{
+    width: 120px;
+    margin-bottom: 3.5px;
+    margin-left: 20px;
+  }
+}
+
+main{
+  // Global section setting
+  section{
+    padding-top: map-get($sectionPadding, top);
+    padding-bottom: map-get($sectionPadding, bottom);
+
+    .sectionTitle{
+      text-transform: uppercase;
+      color: map-get($fontColor, secondary);
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 2.5px;
+
+      @include respond-to('phone'){
+        margin-top: 100px;
+      }
+    }
+
+    // Global h1 (big text) setting
+    h1{
+      font-weight: 700;
+      color: map-get($fontColor, primary);
+      text-transform: uppercase;
+      display: inline-block;
+      margin: 0 20px 0 0;
+      word-spacing: 10px;
+
+      @include respond-to('tablet'){
+        font-size: 47.5px;
+      }
+
+      @include respond-to('phone'){
+        font-size: 43px;
+      }
+    }
+  }
+}

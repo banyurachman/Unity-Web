@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800');
+
+// Most used variable
+$headerHeight: 100vh;
+$mainFont: 'Poppins';
+$green: #1bf1ad;
+$greenOverlay: rgba(27,241,173,0.8);
+
+// Section (main segment) padding variable
+$sectionPadding:(
+  top: 80px,
+  bottom: 0px
+);
+
+// Font color sets for the web
+$fontColor:(
+  primary: rgba(0,0,0,0.9),
+  secondary: rgb(48, 48, 48),
+  tertiaty: rgb(102, 102, 102),
+  orange: #e98457
+);
+
+// Breakpoints for responsiveness
+$breakpoints: (
+  'phone':  480px,
+  'tablet': 768px,
+  'landscapeTablet': 1024px
+)!default;
+
+// Mixin for transition effect
+@mixin transition(){
+  -webkit-transition: all .2s;
+  -ms-transition: all .2s;
+  transition: all .2s;
+}
+
+//Mixin for responsiveness
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Mixin for set the home section/header padding
+@mixin headerPadding($padding){
+  padding-left: $padding;
+  padding-right: $padding;
+}
