@@ -1,0 +1,66 @@
+#whatWeDoSection{
+  .row{
+    .col{
+      position: relative;
+
+      &.l5{
+        img{
+          position: relative;
+          transform: translateX(-30px);
+          width: 100%;
+          z-index: 1;
+        }
+
+        h3{
+          position: absolute;
+          z-index: 2;
+          bottom: 0px;
+          right: 50px;
+          width: 50%;
+          font-weight: 600;
+          color: map-get($fontColor, secondary);
+
+          @include respond-to('landscapeTablet'){
+            font-size: 40px;
+          }
+
+          @include respond-to('tablet'){
+            font-size: 35px;
+          }
+        }
+      }
+
+      &.l7{
+        @include respond-to('phone'){
+            padding: 0 5% 0 5%;
+        }
+
+        #shape-1{
+          position: relative;
+          transform: translate(50%, -100px);
+          width: 50%;
+        }
+
+        #shape-2{
+          position: relative;
+          width: 80%;
+          transform: translate(5%, -100px);
+          z-index: -1;
+        }
+
+        #shape-3{
+          position: relative;
+          transform: translateX(-300px);
+        }
+
+        .content{
+          margin-top: -100px;
+
+          h1:last-child{
+            color: map-get($fontColor, orange);
+          }
+        }
+      }
+    }
+  }
+}

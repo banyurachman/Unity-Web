@@ -1,0 +1,137 @@
+#meetTheTeamSection{
+
+  @include respond-to('landscapeTablet'){
+    padding: 0;
+  }
+
+  .sectionTitle{
+    @include respond-to('phone'){
+        margin-top: 25px;
+    }
+  }
+
+  .content{
+    position: relative;
+
+    #shape-4{
+      position: absolute;
+      transform: translate(-100px, 100px);
+      z-index: -1;
+
+      @include respond-to('tablet'){
+        transform: translate(500px, 200px);
+      }
+
+      @include respond-to('phone'){
+        transform: translate(300px, 200px);
+      }
+    }
+
+    #shape-5{
+      position: absolute;
+      right: 0;
+      z-index: -1;
+
+      @include respond-to('landscapeTablet'){
+        right: -50px;
+      }
+
+      @include respond-to('phone'){
+        right: 0;
+      }
+    }
+
+    #shape-6{
+      position: absolute;
+      left: -50px;
+      top: 200px;
+      z-index: -1;
+
+      @include respond-to('landscapeTablet'){
+        top: 250px;
+        left: -30px;
+        width: 100px;
+      }
+
+      @include respond-to('tablet'){
+        width: 150px;
+        top: 200px;
+      }
+
+      @include respond-to('phone'){
+        top: 250px;
+      }
+    }
+
+    .row{
+      margin-top: 50px;
+      border-radius: 5px;
+
+      &.profile{
+        margin-top: 0px;
+        @include transition();
+
+        h4{
+          margin: 10px 0px 10px 0px;
+        }
+
+        .name{
+          font-size: 15px;
+          color: map-get($fontColor, secondary);
+
+          @include respond-to('tablet'){
+            font-size: 20px;
+          }
+        }
+
+        .title{
+          font-size: 13px;
+          color: map-get($fontColor, tertiaty);
+
+          @include respond-to('tablet'){
+            font-size: 15px;
+          }
+        }
+
+        .socmed{
+          margin-top: 20px;
+
+          a{
+            text-decoration: none;
+            color: map-get($fontColor, primary);
+            margin-right: 10px;
+          }
+        }
+
+        &:hover{
+          background-color: $green;
+          .name, .title, .socmed a{
+            color: white;
+          }
+          @include transition();
+        }
+
+        .col{
+          padding: 20px;
+
+          @include respond-to('landscapeTablet'){
+            padding: 5px;
+
+            &:last-child{
+              padding-right: 20px;
+            }
+          }
+
+          @include respond-to('tablet'){
+            padding: 10px;
+          }
+
+          img{
+            width: 100%;
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+  }
+}

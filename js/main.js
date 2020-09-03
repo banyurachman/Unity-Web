@@ -84,18 +84,18 @@ $( document ).ready(function() {
     scrollIt();
 
     // Use the reveal animation
-    ScrollReveal().reveal('#homeSection a img', {delay:400});
-    ScrollReveal().reveal('#headerMainTitle', {delay:800});
-    ScrollReveal().reveal('#mainMenu', {delay:1000});
+    ScrollReveal().reveal('#homeSection a img', {delay:200});
+    ScrollReveal().reveal('#headerMainTitle', {delay:400});
+    ScrollReveal().reveal('#mainMenu', {delay:600});
     ScrollReveal().reveal('.sectionTitle');
-    ScrollReveal().reveal('section h1', {delay:800});
-    ScrollReveal().reveal('section img', {delay:1200});
-    ScrollReveal().reveal('#aboutUsSection .sectionTitle', {delay:1000});
-    ScrollReveal().reveal('#aboutUsSection p', {delay:1200});
-    ScrollReveal().reveal('#whatWeDoSection h3', {delay:1400});
-    ScrollReveal().reveal('#meetTheTeamSection .name', {delay:1100});
-    ScrollReveal().reveal('#meetTheTeamSection .title', {delay:1200});
-    ScrollReveal().reveal('#meetTheTeamSection .socmed', {delay:1500});
-    ScrollReveal().reveal('#ourWorkSection .slider', {delay:1200});
+    ScrollReveal().reveal('section h1', {delay:200});
+    ScrollReveal().reveal('section img', {delay:400});
+    ScrollReveal().reveal('#aboutUsSection .sectionTitle', {delay:600});
+    ScrollReveal().reveal('#aboutUsSection p', {delay:400});
+    ScrollReveal().reveal('#whatWeDoSection h3', {delay:600});
+    ScrollReveal().reveal('#meetTheTeamSection .name', {delay:600});
+    ScrollReveal().reveal('#meetTheTeamSection .title', {delay:800});
+    ScrollReveal().reveal('#meetTheTeamSection .socmed', {delay:1000});
+    ScrollReveal().reveal('#ourWorkSection .slider', {delay:800});
 
 });

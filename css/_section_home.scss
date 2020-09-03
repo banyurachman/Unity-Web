@@ -1,0 +1,48 @@
+#homeSection{
+  height: $headerHeight;
+  @include respond-to('phone'){
+    height: 500px;
+  }
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0),
+  rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.3));
+
+  .container{
+    position: relative;
+    height: 100%;
+    text-align: center;
+    @include respond-to('phone'){
+      text-align: left;
+    }
+
+
+    img{
+      margin-top: 25px;
+    }
+
+    .valign-wrapper{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: $headerHeight;
+      @include respond-to('phone'){
+        height: 500px;
+      }
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  #headerMainTitle{
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 64px;
+    letter-spacing: 7px;
+    // line-height: 40px;
+    @include respond-to('phone'){
+      font-size: 28px;
+    }
+    color: white;
+    font-weight: 500;
+    margin: 0;
+  }
+}
