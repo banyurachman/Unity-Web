@@ -7,26 +7,6 @@ body {
   background: black;
 }
 
-.parallax.mobile {
-  visibility: hidden;
-}
-
-@media (max-width: 768px) {
-  .parallax.mobile {
-    visibility: visible;
-  }
-}
-
-.parallax.desktop {
-  visibility: visible;
-}
-
-@media (max-width: 768px) {
-  .parallax.desktop {
-    visibility: hidden;
-  }
-}
-
 .sidenav-trigger i {
   display: inline-block !important;
 }

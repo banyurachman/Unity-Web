@@ -5,20 +5,6 @@ body{
 // Main image background setting
 .parallax{
   background: black;
-
-  &.mobile{
-    visibility: hidden;
-    @include respond-to('tablet') {
-      visibility: visible;
-    }
-  }
-
-  &.desktop{
-    visibility: visible;
-    @include respond-to('tablet') {
-      visibility: hidden;
-    }
-  }
 }
 
 // Sidebar setting for Unity logo
