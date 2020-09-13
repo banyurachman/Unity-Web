@@ -100,7 +100,7 @@ main section h1 {
 
 #mainMenu ul li a:hover {
   background: transparent;
-  border-bottom-color: #1bf1ad;
+  border-bottom-color: #E98559;
   opacity: 1;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -157,7 +157,7 @@ main section h1 {
 
 #mainMenuFixed ul li a:hover {
   background: transparent;
-  border-bottom-color: #1bf1ad;
+  border-bottom-color: #E98559;
   opacity: 1;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -222,6 +222,8 @@ main section h1 {
   text-transform: uppercase;
   font-size: 64px;
   letter-spacing: 7px;
+  background-color: #000b;
+  padding: .5em;
   color: white;
   font-weight: 500;
   margin: 0;
@@ -473,6 +475,8 @@ main section h1 {
 
 #meetTheTeamSection .content .row.profile:hover {
   background-color: #1bf1ad;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: all .2s;
   transition: all .2s;
 }
@@ -608,6 +612,8 @@ main section h1 {
 #ourWorkSection .slider .sliderItem.sliderItem-1:hover {
   background: -webkit-gradient(linear, left top, right top, from(rgba(27, 241, 173, 0.8)), to(rgba(27, 241, 173, 0.8))), url("../images/work-1.png");
   background: linear-gradient(to right, rgba(27, 241, 173, 0.8), rgba(27, 241, 173, 0.8)), url("../images/work-1.png");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: all .2s;
   transition: all .2s;
 }
@@ -625,6 +631,8 @@ main section h1 {
 #ourWorkSection .slider .sliderItem.sliderItem-2:hover {
   background: -webkit-gradient(linear, left top, right top, from(rgba(27, 241, 173, 0.8)), to(rgba(27, 241, 173, 0.8))), url("../images/work-2.png");
   background: linear-gradient(to right, rgba(27, 241, 173, 0.8), rgba(27, 241, 173, 0.8)), url("../images/work-2.png");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: all .2s;
   transition: all .2s;
 }
@@ -642,6 +650,8 @@ main section h1 {
 #ourWorkSection .slider .sliderItem.sliderItem-3:hover {
   background: -webkit-gradient(linear, left top, right top, from(rgba(27, 241, 173, 0.8)), to(rgba(27, 241, 173, 0.8))), url("../images/work-3.png");
   background: linear-gradient(to right, rgba(27, 241, 173, 0.8), rgba(27, 241, 173, 0.8)), url("../images/work-3.png");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: all .2s;
   transition: all .2s;
 }
@@ -659,6 +669,8 @@ main section h1 {
 #ourWorkSection .slider .sliderItem.sliderItem-4:hover {
   background: -webkit-gradient(linear, left top, right top, from(rgba(27, 241, 173, 0.8)), to(rgba(27, 241, 173, 0.8))), url("../images/work-4.png");
   background: linear-gradient(to right, rgba(27, 241, 173, 0.8), rgba(27, 241, 173, 0.8)), url("../images/work-4.png");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: all .2s;
   transition: all .2s;
 }
@@ -676,6 +688,8 @@ main section h1 {
 #ourWorkSection .slider .sliderItem.sliderItem-5:hover {
   background: -webkit-gradient(linear, left top, right top, from(rgba(27, 241, 173, 0.8)), to(rgba(27, 241, 173, 0.8))), url("../images/work-5.png");
   background: linear-gradient(to right, rgba(27, 241, 173, 0.8), rgba(27, 241, 173, 0.8)), url("../images/work-5.png");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: all .2s;
   transition: all .2s;
 }
