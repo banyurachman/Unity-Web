@@ -38,6 +38,10 @@
     font-size: 64px;
     letter-spacing: 7px;
     // line-height: 40px;
+
+    background-color: #000b;
+    padding: .5em;
+
     @include respond-to('phone'){
       font-size: 28px;
     }

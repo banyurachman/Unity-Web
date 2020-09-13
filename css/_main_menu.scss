@@ -32,7 +32,7 @@
 
         &:hover{
           background: transparent;
-          border-bottom-color: $green;
+          border-bottom-color: $orange;
           opacity: 1;
           @include transition();
         }
